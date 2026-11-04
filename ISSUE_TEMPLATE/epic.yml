@@ -1,0 +1,68 @@
+name: Epic
+description: A unit of work a developer and their bots can pick up
+title: "[Epic]: "
+labels: ["epic"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What this epic achieves, in a few sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: in-scope
+    attributes:
+      label: In scope
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+    validations:
+      required: true
+  - type: textarea
+    id: ac-happy
+    attributes:
+      label: Acceptance criteria (happy)
+      description: 'One line per case, for example "H1: ..."'
+    validations:
+      required: true
+  - type: textarea
+    id: ac-unhappy
+    attributes:
+      label: Acceptance criteria (unhappy)
+      description: 'One line per case, for example "U1: ..."'
+    validations:
+      required: true
+  - type: checkboxes
+    id: size-check
+    attributes:
+      label: Size check
+      options:
+        - label: This epic is small enough to finish in one PR of roughly 400 changed lines or fewer
+          required: true
+  - type: input
+    id: areas
+    attributes:
+      label: Areas
+      description: Optional. Folders this epic expects to change, comma separated. Used only for the overlap warning when the epic is started with bot-start.sh.
+      placeholder: api/src/routes/, db/migrations/
+  - type: textarea
+    id: system-map
+    attributes:
+      label: System Map flows
+  - type: textarea
+    id: design
+    attributes:
+      label: Design reference
+      description: Prototype link and screen names.
+  - type: textarea
+    id: depends-on
+    attributes:
+      label: Depends on
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Open questions
