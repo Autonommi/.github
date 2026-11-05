@@ -1,0 +1,88 @@
+name: Task
+description: A concrete, scoped piece of work, usually completable by one person.
+title: "[Task]: "
+type: Task
+labels:
+  - "type: task"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for a well-defined unit of work. If a field doesn't apply, write "N/A" rather than leaving it blank.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What this task accomplishes and why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: included-work
+    attributes:
+      label: Included work
+      description: What is in scope for this task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: Explicit non-goals
+      description: What is deliberately not being done here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: How we will know this task is done.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Other tasks, systems, or people this relies on.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing required
+      description: What must be tested and how.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logging-observability
+    attributes:
+      label: Logging or observability impact
+      description: New logs, metrics, traces, or alerts, if any.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation impact
+      description: Docs, READMEs, or runbooks that need updating.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollout-migration
+    attributes:
+      label: Rollout or migration notes
+      description: Deployment steps, migrations, or sequencing concerns.
+      placeholder: "N/A if none"
+    validations:
+      required: true

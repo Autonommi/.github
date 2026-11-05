@@ -1,0 +1,118 @@
+name: Decision
+description: A choice that needs to be made, tracked from question to record.
+title: "[Decision]: "
+type: Decision
+labels:
+  - "type: decision"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to drive a decision to closure. The last few fields are expected to be filled in as the decision is resolved, not at creation time.
+
+  - type: textarea
+    id: decision-to-make
+    attributes:
+      label: Decision to make
+      description: State the question as a decision, not a topic.
+    validations:
+      required: true
+
+  - type: input
+    id: decision-owner
+    attributes:
+      label: Decision owner
+      description: Who is accountable for making this call.
+    validations:
+      required: true
+
+  - type: input
+    id: decision-deadline
+    attributes:
+      label: Decision deadline
+      description: Date by which this must be decided, and why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why it is needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: blocked-work
+    attributes:
+      label: Work blocked by the decision
+      placeholder: "N/A if nothing is blocked"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options considered
+      placeholder: |
+        1. Option A - ...
+        2. Option B - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evaluation-criteria
+    attributes:
+      label: Evaluation criteria
+      description: What makes one option better than another.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence gathered
+      description: Data, research, or prior art informing this decision. Filled in as it's gathered.
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: final-decision
+    attributes:
+      label: Final decision
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: follow-up-tickets
+    attributes:
+      label: Follow-up tickets
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: decision-record
+    attributes:
+      label: Architecture or product decision record
+      description: Link to the ADR/PDR once written.
+      placeholder: "N/A yet"
+    validations:
+      required: false

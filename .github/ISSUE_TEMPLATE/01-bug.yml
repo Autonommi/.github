@@ -1,0 +1,119 @@
+name: Bug
+description: Something is broken or behaving incorrectly.
+title: "[Bug]: "
+type: Bug
+labels:
+  - "type: bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to report a defect. If a field doesn't apply, write "N/A" rather than leaving it blank. Remove any sensitive information from screenshots or logs before attaching them.
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Staging
+        - Development
+        - Local
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Specifications
+      description: Application or service version, and Device and OS versions where applicable
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: State of the system, account, or data needed before reproducing this.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Reproduction steps
+      description: Exact, numbered steps to reproduce.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Rarely
+        - Happened once
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User impact
+      description: Who is affected and how severely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: safety-privacy-integrity
+    attributes:
+      label: Safety/privacy/data-integrity impact
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or logs (sensitive information removed)
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Known workaround
+      placeholder: "N/A if none"
+    validations:
+      required: false
+
+  - type: textarea
+    id: regression-test
+    attributes:
+      label: Regression-test requirement
+      description: What test should be added so this doesn't recur.
+    validations:
+      required: true

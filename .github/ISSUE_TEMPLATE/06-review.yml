@@ -1,0 +1,90 @@
+name: Review
+description: A structured review of an artifact or feature against defined criteria.
+title: "[Review]: "
+type: Review
+labels:
+  - "type: review"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request or record a review. The findings-and-approval fields are expected to be filled in as the review happens, not at creation time.
+
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Artifact or feature being reviewed
+      description: What is being reviewed, with a link.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: discipline
+    attributes:
+      label: Review discipline
+      options:
+        - Design
+        - Security
+        - Privacy
+        - Accessibility
+        - Code
+        - Content/copy
+        - Legal/compliance
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: review-criteria
+    attributes:
+      label: Review criteria
+      description: The standard, checklist, or bar this is being reviewed against.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence-provided
+    attributes:
+      label: Evidence provided
+      description: What the reviewer was given to review (links, builds, docs, test results).
+    validations:
+      required: true
+
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: required-changes
+    attributes:
+      label: Required changes
+      placeholder: "N/A if none"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: approval-status
+    attributes:
+      label: Approval status
+      options:
+        - Pending
+        - Approved
+        - Approved with changes
+        - Rejected
+      default: 0
+    validations:
+      required: false
+
+  - type: input
+    id: approver
+    attributes:
+      label: Approver
+      placeholder: "N/A yet"
+    validations:
+      required: false
+

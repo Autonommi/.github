@@ -1,0 +1,113 @@
+name: Incident
+description: An unplanned disruption or safety/privacy event, tracked from detection to closure.
+title: "[Incident]: "
+type: Incident
+labels:
+  - "type: incident"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template as soon as an incident is detected. Root cause, resolution, communication, and follow-up tickets are expected to be filled in as the incident progresses, not at creation time.
+
+  - type: input
+    id: detection-time
+    attributes:
+      label: Detection time
+      description: Date and time the incident was detected, with timezone.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment-cohort
+    attributes:
+      label: Environment and affected cohort
+      description: Which environment, and which users/accounts/regions are affected.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - SEV1 - critical, all-hands
+        - SEV2 - major, urgent response
+        - SEV3 - minor, limited impact
+        - SEV4 - low, cosmetic or negligible
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: safety-privacy-data
+    attributes:
+      label: Safety/privacy/data impact
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: containment
+    attributes:
+      label: Immediate containment
+      description: What was done right away to limit damage.
+    validations:
+      required: true
+
+  - type: input
+    id: incident-commander
+    attributes:
+      label: Incident commander
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Key events with timestamps. Keep updating as the incident progresses.
+      placeholder: |
+        - HH:MM - detected
+        - HH:MM - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: Root cause
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: resolution
+    attributes:
+      label: Resolution
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: communication
+    attributes:
+      label: Communication
+      description: Who was told, when, and through what channel (status page, support, internal).
+      placeholder: "N/A yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: corrective-preventive
+    attributes:
+      label: Corrective and preventive tickets
+      placeholder: "N/A yet"
+    validations:
+      required: false

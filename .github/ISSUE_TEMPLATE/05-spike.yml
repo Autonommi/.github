@@ -1,0 +1,73 @@
+name: Spike
+description: A time-boxed investigation to produce knowledge or a recommendation.
+title: "[Spike]: "
+type: Spike
+labels:
+  - "type: spike"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A spike should produce knowledge or a recommendation, not production code — unless this ticket explicitly identifies disposable prototype code below.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question being investigated
+    validations:
+      required: true
+
+  - type: input
+    id: time-box
+    attributes:
+      label: Time box
+      description: The maximum time/effort allotted, e.g. "2 days".
+    validations:
+      required: true
+
+  - type: textarea
+    id: options-hypothesis
+    attributes:
+      label: Options or hypothesis
+    validations:
+      required: false
+
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Required experiment
+      description: What will actually be built, tested, or measured to answer the question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-failure-criteria
+    attributes:
+      label: Success and failure criteria
+      description: How we'll know the spike answered the question, even if the answer is "no".
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: The concrete output, e.g. a write-up, comparison table, or disposable prototype.
+    validations:
+      required: true
+
+  - type: textarea
+    id: enabled-decision
+    attributes:
+      label: Decision the result will enable
+      description: Link to the decision or feature ticket this unblocks, if any.
+    validations:
+      required: true
+
+  - type: textarea
+    id: excluded-implementation
+    attributes:
+      label: Follow-up implementation explicitly excluded
+      description: State plainly that shipping the real implementation is out of scope for this ticket, and note any exception for disposable prototype code.
+    validations:
+      required: true
