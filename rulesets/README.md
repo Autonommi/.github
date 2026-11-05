@@ -44,7 +44,7 @@ Record the returned `id` here:
 
 | Ruleset | Org ruleset id | Created |
 |---|---|---|
-| Protect main | not created yet | |
+| Protect main | 26630015 | 2026-11-05 |
 
 ## Update
 
