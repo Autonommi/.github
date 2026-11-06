@@ -2,6 +2,7 @@ name: Epic
 description: A unit of work a developer and their bots can pick up
 title: "[Epic]: "
 labels: ["epic"]
+type: Epic
 body:
   - type: textarea
     id: goal

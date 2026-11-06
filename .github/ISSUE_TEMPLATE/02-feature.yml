@@ -1,0 +1,104 @@
+name: Feature
+description: A user- or operator-facing capability to be built.
+title: "[Feature]: "
+type: Feature
+labels:
+  - "type: feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for a discrete piece of user- or operator-facing functionality. If a field doesn't apply, write "N/A" rather than leaving it blank.
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Description
+      description: What the user or operator can do after this ships that they couldn't before.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: Current problem
+      description: What is broken, missing, or painful today.
+    validations:
+      required: true
+
+  - type: textarea
+    id: included-behavior
+    attributes:
+      label: Included behavior
+      description: What this feature does.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out-of-scope behavior
+      description: What this feature deliberately does not do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Concrete, testable conditions for this being done.
+      placeholder: |
+        - [ ] Given ___, when ___, then ___
+    validations:
+      required: true
+
+  - type: textarea
+    id: states
+    attributes:
+      label: User states and failure states
+      description: Empty, loading, error, offline, permission-denied, and other non-happy-path states.
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-copy-refs
+    attributes:
+      label: Design or copy references
+      description: Links to mockups, prototypes, or copy docs.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: data-impact
+    attributes:
+      label: Data created, read, changed, or deleted
+      description: What data this feature touches, and how.
+    validations:
+      required: true
+
+  - type: textarea
+    id: safety-privacy
+    attributes:
+      label: Safety/privacy impact
+      description: Any safety, privacy, legal, or compliance impact.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Other features, systems, or teams this relies on.
+      placeholder: "N/A if none"
+    validations:
+      required: true
+
+  - type: textarea
+    id: test-requirements
+    attributes:
+      label: Test requirements
+      description: What must be covered by tests (unit, integration, e2e, manual QA).
+    validations:
+      required: true
