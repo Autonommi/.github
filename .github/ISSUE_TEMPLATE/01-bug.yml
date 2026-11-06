@@ -28,6 +28,7 @@ body:
     attributes:
       label: Specifications
       description: Application or service version, and Device and OS versions where applicable
+    validations:
       required: true
 
   - type: textarea
