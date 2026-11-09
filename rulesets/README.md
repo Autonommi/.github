@@ -9,7 +9,7 @@ Part of Autonommi/etterly-mobile#22.
 
 | File | Org ruleset id | Targets | Purpose |
 |---|---|---|---|
-| `protect-main.json` | 26630015 | `etterly-backend`, `etterly-mobile`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
+| `protect-main.json` | 26630015 | `etterly-backend`, `etterly-mobile`, `.github`, `standards`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
 
 ## What `protect-main.json` enforces
 
@@ -52,17 +52,13 @@ gh api repos/Autonommi/<repo>/rules/branches/main --jq '.[] | {type, ruleset_id,
 
 ## Old repo-level rulesets
 
-Replaced by the org ruleset and disabled on 2026-11-05. To be deleted once a real PR has merged under the
-org ruleset alone:
-
-```sh
-gh api -X DELETE repos/Autonommi/<repo>/rulesets/<id>
-```
+Replaced by the org ruleset and disabled on 2026-11-05. Deleted on 2026-11-09, after PRs had merged in
+both repos under the org ruleset alone.
 
 | Repo | Repo ruleset | id | Status |
 |---|---|---|---|
-| etterly-backend | Protect main | 25512782 | Disabled |
-| etterly-mobile | Protect Main | 24211782 | Disabled |
+| etterly-backend | Protect main | 25512782 | Deleted |
+| etterly-mobile | Protect Main | 24211782 | Deleted |
 
 ## Emergencies
 
