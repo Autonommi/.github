@@ -5,7 +5,7 @@
   "bypass_actors": [],
   "conditions": {
     "repository_name": {
-      "include": ["etterly-backend", "etterly-mobile"],
+      "include": ["etterly-backend", "etterly-mobile", ".github", "standards"],
       "exclude": [],
       "protected": true
     },
