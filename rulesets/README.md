@@ -9,7 +9,7 @@ Part of Autonommi/etterly-mobile#22.
 
 | File | Org ruleset id | Targets | Purpose |
 |---|---|---|---|
-| `protect-main.json` | 26630015 | `etterly-backend`, `etterly-mobile`, `.github`, `standards`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
+| `protect-main.json` | 26630015 | `etterly-backend`, `etterly-frontend`, `.github`, `standards`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
 
 ## What `protect-main.json` enforces
 
