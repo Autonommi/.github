@@ -1,0 +1,32 @@
+{
+  "name": "Require checks (frontend)",
+  "target": "branch",
+  "enforcement": "active",
+  "bypass_actors": [],
+  "conditions": {
+    "repository_name": {
+      "include": ["etterly-frontend"],
+      "exclude": [],
+      "protected": true
+    },
+    "ref_name": {
+      "include": ["refs/heads/main"],
+      "exclude": []
+    }
+  },
+  "rules": [
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": true,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [
+          { "context": "exact versions", "integration_id": 15368 },
+          { "context": "allowed licences", "integration_id": 15368 },
+          { "context": "approved packages", "integration_id": 15368 },
+          { "context": "check", "integration_id": 15368 }
+        ]
+      }
+    }
+  ]
+}
