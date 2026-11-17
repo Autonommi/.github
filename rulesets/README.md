@@ -46,7 +46,8 @@ they would block every PR. One ruleset per app repo because the check lists diff
 - Each check pins `integration_id: 15368` (GitHub Actions), so a status with the same name from another
   app or a token doesn't count.
 - `strict_required_status_checks_policy: true`: a PR must be up to date with main. After each merge, every
-  open PR needs "Update branch" and a new run of its checks. This also applies to hotfix PRs: auto-merge
+  open PR needs "Update branch" → **"Update with rebase"** (it matches our rebase-only merging) and a new
+  run of its checks. A rebase update keeps the PR's approval. This also applies to hotfix PRs: auto-merge
   waits until the branch is updated.
 - `approved packages` is skipped on hotfix PRs (see the app repo READMEs). GitHub counts a skipped job as
   passing, so the hotfix lane still works; the check runs on main after the merge.
