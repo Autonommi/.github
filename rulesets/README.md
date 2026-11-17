@@ -3,7 +3,7 @@
 Org-level rulesets for Autonommi, stored as the exact request body for the GitHub REST API
 (`POST orgs/Autonommi/rulesets`). The same files can be loaded with "Import a ruleset" in the org settings.
 
-Part of Autonommi/etterly-mobile#22.
+Part of Autonommi/etterly-frontend#22.
 
 ## Rulesets
 
