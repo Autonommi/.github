@@ -42,6 +42,7 @@ they would block every PR. One ruleset per app repo because the check lists diff
 | `allowed licences` | `licences.yml` | Required | Required |
 | `approved packages` | `approvals.yml` | Required | Required |
 | `check` | `mobile.yml` | n/a | Required |
+| `secret scan` | `secrets.yml` | Required | Required |
 
 - Each check pins `integration_id: 15368` (GitHub Actions), so a status with the same name from another
   app or a token doesn't count.
