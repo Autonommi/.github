@@ -10,8 +10,8 @@ Part of Autonommi/etterly-frontend#22.
 | File | Org ruleset id | Targets | Purpose |
 |---|---|---|---|
 | `protect-main.json` | 26630015 | `etterly-backend`, `etterly-frontend`, `.github`, `standards`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
-| `require-checks-backend.json` | not created yet | `etterly-backend`, branch `refs/heads/main` | Required checks, up to date with main |
-| `require-checks-frontend.json` | not created yet | `etterly-frontend`, branch `refs/heads/main` | Required checks, up to date with main |
+| `require-checks-backend.json` | 27586458 | `etterly-backend`, branch `refs/heads/main` | Required checks, up to date with main |
+| `require-checks-frontend.json` | 27498682 | `etterly-frontend`, branch `refs/heads/main` | Required checks, up to date with main |
 
 ## What `protect-main.json` enforces
 
