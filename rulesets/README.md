@@ -12,7 +12,7 @@ Part of Autonommi/etterly-frontend#22.
 | `protect-main.json` | 26630015 | `etterly-backend`, `etterly-frontend`, `.github`, `standards`, branch `refs/heads/main` | Rule GH-09 in `standards/RULES.md` |
 | `require-checks-backend.json` | 27586458 | `etterly-backend`, branch `refs/heads/main` | Required checks, up to date with main |
 | `require-checks-frontend.json` | 27498682 | `etterly-frontend`, branch `refs/heads/main` | Required checks, up to date with main |
-| `require-checks-standards.json` | | `standards`, branch `refs/heads/main` | Required checks, up to date with main |
+| `require-checks-standards.json` | 27769025 | `standards`, branch `refs/heads/main` | Required checks, up to date with main |
 
 ## What `protect-main.json` enforces
 
