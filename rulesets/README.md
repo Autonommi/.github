@@ -44,6 +44,9 @@ required where it doesn't run would block every PR. One ruleset per repo because
 | `approved packages` | `approvals.yml` | Required | Required | n/a |
 | `check` | `mobile.yml` | n/a | Required | n/a |
 | `secret scan` | `secrets.yml` | Required | Required | n/a |
+| `typecheck, lint, unit tests` | `checks.yml` | Required | n/a | n/a |
+| `migrations and db tests` | `checks.yml` | Runs, not required | n/a | n/a |
+| `image tests` | `checks.yml` | Runs, not required | n/a | n/a |
 | `approval-files` | `approval-files.yml` | n/a | n/a | Required |
 
 - Each check pins `integration_id: 15368` (GitHub Actions), so a status with the same name from another
@@ -54,8 +57,9 @@ required where it doesn't run would block every PR. One ruleset per repo because
   waits until the branch is updated.
 - `approved packages` is skipped on hotfix PRs (see the app repo READMEs). GitHub counts a skipped job as
   passing, so the hotfix lane still works; the check runs on main after the merge.
-- The backend has no build or test job on PRs yet. When it gets one, add its job name to
-  `require-checks-backend.json`.
+- Backend `migrations and db tests` and `image tests` run on every PR and on main but are not required:
+  they need Postgres and a Docker build, and the hotfix lane merges after the quick checks only. Like the
+  frontend's `check`, `typecheck, lint, unit tests` is the one that blocks.
 
 Rules for the workflows behind required checks:
 
